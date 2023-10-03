@@ -13,10 +13,12 @@ function Home() {
   const EmailLink = "mailto:issamhando@gmail.com";
 
   const handleDownload = () => {
-    const resumePath =
-      "https://drive.google.com/file/d/1R0IjriODimoYsmMUAxa-97Nr9EwP49uH/view?usp=sharing";
+    const resumePath = process.env.PUBLIC_URL + "/resume.pdf"; // Update with your resume path
 
-    saveAs(resumePath, "issa_mhando_Resume.pdf");
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = "issa_mhando_Resume.pdf";
+    link.click();
   };
 
   return (

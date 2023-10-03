@@ -13,7 +13,8 @@ function Home() {
   const EmailLink = "mailto:issamhando@gmail.com";
 
   const handleDownload = () => {
-    const resumePath = "../assets/resume.pdf";
+    const resumePath =
+      "https://drive.google.com/file/d/1R0IjriODimoYsmMUAxa-97Nr9EwP49uH/view?usp=sharing";
 
     saveAs(resumePath, "issa_mhando_Resume.pdf");
   };
